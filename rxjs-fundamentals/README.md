@@ -11,3 +11,5 @@
 <hr>
 
 This tests are made with JavaScript and Webpack
+
+For testing is recommended this extension for vscode [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
