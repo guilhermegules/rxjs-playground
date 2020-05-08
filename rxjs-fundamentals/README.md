@@ -1,0 +1,13 @@
+## RxJs
+
+### Just some fundamentals in Rxjs
+
+- Install all dependencies `npm install`;
+- Run app `npm build`;
+- And Run `index.html`, Just uncomment imports in index.js; 
+
+> By default 1-create.js is uncomment
+
+<hr>
+
+This tests are made with JavaScript and Webpack
