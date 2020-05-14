@@ -3,7 +3,7 @@
 ### Just some fundamentals in Rxjs
 
 - Install all dependencies `npm install`;
-- Run app `npm build`;
+- Run app `npm run build`;
 - And Run `index.html`, Just uncomment imports in index.js; 
 
 > By default 1-create.js is uncomment
