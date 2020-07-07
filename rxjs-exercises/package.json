@@ -1,0 +1,17 @@
+{
+  "name": "rxjs-exercises",
+  "version": "1.0.0",
+  "description": "Some exercises for better understanding RxJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "RxJS"
+  ],
+  "author": "Guilherme Gules Moreira",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.6.0"
+  }
+}
