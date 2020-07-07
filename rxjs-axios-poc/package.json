@@ -1,0 +1,24 @@
+{
+  "name": "rxjs-reactive-programming",
+  "version": "1.0.0",
+  "description": "Some exercises with RxJs",
+  "main": "index.js",
+  "scripts": {
+    "start:app": "nodemon src/index.js",
+    "start:api": "json-server --watch assets/api.json --port 8080"
+  },
+  "keywords": [
+    "RxJs",
+    "JavaScript"
+  ],
+  "author": "Guilherme Gules Moreira",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "rxjs": "^6.6.0"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.1",
+    "nodemon": "^2.0.4"
+  }
+}
