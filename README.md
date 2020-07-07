@@ -5,3 +5,5 @@
 </p>
 
 Repository for training and fun with RxJS
+
+[Official Docs](https://rxjs.dev/guide/overview)
