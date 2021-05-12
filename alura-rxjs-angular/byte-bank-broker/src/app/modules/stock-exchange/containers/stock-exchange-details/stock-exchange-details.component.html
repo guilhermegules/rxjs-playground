@@ -1,0 +1,10 @@
+<div
+  *ngIf="(stockExchangeData$ | async)?.length; else emptyData"
+  class="stock-exchange-details"
+>
+  <ng-container *ngFor="let data of stockExchangeData$ | async">
+    <app-card [data]="data"></app-card>
+  </ng-container>
+</div>
+
+<ng-template #emptyData> Não há dados </ng-template>

@@ -1,0 +1,12 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from '../../shared/shared.module';
+
+import { StockExchangeRoutingModule } from './stock-exchange-routing.module';
+import { StockExchangeDetailsComponent } from './containers/stock-exchange-details/stock-exchange-details.component';
+
+@NgModule({
+  declarations: [StockExchangeDetailsComponent],
+  imports: [CommonModule, StockExchangeRoutingModule, SharedModule],
+})
+export class StockExchangeModule {}

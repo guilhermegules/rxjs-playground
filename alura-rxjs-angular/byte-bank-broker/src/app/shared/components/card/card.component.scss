@@ -1,0 +1,11 @@
+:host {
+  .card {
+    background-color: #ccc;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+}

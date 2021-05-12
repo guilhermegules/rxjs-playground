@@ -5,7 +5,11 @@
   "projects": {
     "byte-bank-broker": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -21,19 +25,10 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/@po-ui/style/images",
-                "output": "assets/images"
-              }
+              "src/assets"
             ],
             "styles": [
-              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
-              "./node_modules/@po-ui/style/css/po-theme-default-variables.min.css",
-              "./node_modules/byte-bank-theme/css/po-theme-custom-variables.min.css",
-              "./node_modules/@po-ui/style/css/po-theme-core.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -48,7 +43,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -97,11 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
-              "./node_modules/@po-ui/style/css/po-theme-default-variables.min.css",
-              "./node_modules/byte-bank-theme/css/po-theme-custom-variables.min.css",
-              "./node_modules/@po-ui/style/css/po-theme-core.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -134,8 +124,5 @@
       }
     }
   },
-  "defaultProject": "byte-bank-broker",
-  "cli": {
-    "analytics": "474b4f10-10d8-4bcb-80c4-715fac42bcf5"
-  }
+  "defaultProject": "byte-bank-broker"
 }

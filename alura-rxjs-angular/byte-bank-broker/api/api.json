@@ -1,0 +1,22 @@
+{
+  "stockExchange": [
+    {
+      "id": 1,
+      "code": "code stock exchange 1",
+      "description": "JS Mock",
+      "price": 15.5
+    },
+    {
+      "id": 2,
+      "code": "code stock exchange 3",
+      "description": "RxJs is Great",
+      "price": 15.5
+    },
+    {
+      "id": 3,
+      "code": "code stock exchange 5",
+      "description": "TS Mock",
+      "price": 15.5
+    }
+  ]
+}

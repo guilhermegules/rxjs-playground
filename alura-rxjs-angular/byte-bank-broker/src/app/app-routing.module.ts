@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AuthorizationGuard } from './authorization/authorization.guard';
+import { RouterModule, Routes } from '@angular/router';
 
-export const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
+const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () =>
-      import('../app/home/home.module').then((m) => m.HomeModule),
-    canLoad: [AuthorizationGuard],
+    path: '',
+    children: [
+      {
+        path: 'stock-exchange',
+        loadChildren: () =>
+          import('./modules/stock-exchange/stock-exchange.module').then(
+            (m) => m.StockExchangeModule
+          ),
+      },
+    ],
   },
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('../app/login/login.module').then((m) => m.LoginModule),
-  },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
