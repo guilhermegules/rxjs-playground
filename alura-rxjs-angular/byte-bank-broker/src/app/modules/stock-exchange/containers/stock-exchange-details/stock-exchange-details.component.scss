@@ -4,4 +4,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
   }
+
+  input {
+    height: 32px;
+    margin: 10px;
+  }
 }

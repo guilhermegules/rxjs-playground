@@ -1,3 +1,7 @@
+<form [formGroup]="formGroup">
+  <input type="text" formControlName="stockExchangeSearch" />
+</form>
+
 <div
   *ngIf="(stockExchangeData$ | async)?.length; else emptyData"
   class="stock-exchange-details"

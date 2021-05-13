@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { merge, Observable } from 'rxjs';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  filter,
+  switchMap,
+} from 'rxjs/operators';
 
 import { StockExchanges } from '../../../../models/stock-exchange';
 import { StockExchangeService } from '../../../../services/stock-exchange.service';
@@ -11,11 +17,34 @@ import { StockExchangeService } from '../../../../services/stock-exchange.servic
   styleUrls: ['./stock-exchange-details.component.scss'],
 })
 export class StockExchangeDetailsComponent implements OnInit {
+  public formGroup: FormGroup;
   public stockExchangeData$: Observable<StockExchanges>;
+  public allStockExchanges$ = this.stockExchange.getStockExchanges();
+  public searchValue$: Observable<StockExchanges>;
 
-  constructor(private stockExchange: StockExchangeService) {}
+  private readonly WAIT_FOR_TRIGGER = 300;
+
+  constructor(
+    private stockExchange: StockExchangeService,
+    private fb: FormBuilder
+  ) {}
 
   public ngOnInit(): void {
-    this.stockExchangeData$ = this.stockExchange.getStockExchanges();
+    this.formGroup = this.fb.group({
+      stockExchangeSearch: null,
+    });
+
+    this.searchValue$ = this.formGroup
+      .get('stockExchangeSearch')
+      .valueChanges.pipe(
+        debounceTime(this.WAIT_FOR_TRIGGER),
+        filter(
+          (searchedValue) => searchedValue.length >= 3 || !searchedValue.length
+        ),
+        distinctUntilChanged(),
+        switchMap((search) => this.stockExchange.getStockExchanges(search))
+      );
+
+    this.stockExchangeData$ = merge(this.allStockExchanges$, this.searchValue$);
   }
 }
