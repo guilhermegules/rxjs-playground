@@ -1,0 +1,20 @@
+{
+  "name": "subjects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "subject": "node ./src/subject.js",
+    "behavior-subject": "node ./src/behavior-subject.js",
+    "replay-subject": "node ./src/replay-subject.js",
+    "async-subject": "node ./src/async-subject.js"
+  },
+  "keywords": [
+    "RxJs"
+  ],
+  "author": "Guilherme Gules Moreira",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.4.0"
+  }
+}
