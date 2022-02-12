@@ -1,0 +1,23 @@
+{
+  "name": "custom-operators",
+  "version": "1.0.0",
+  "description": "Creating custom operators with rxjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "keywords": [
+    "RxJs",
+    "TypeScript",
+    "Operators"
+  ],
+  "author": "Guilherme Gules Moreira",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "rxjs": "^7.5.4"
+  }
+}
