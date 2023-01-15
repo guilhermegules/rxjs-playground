@@ -1,0 +1,22 @@
+{
+  "name": "marble-tests",
+  "version": "1.0.0",
+  "description": "Test observables with marble tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "RxJS",
+    "Test",
+    "Marble"
+  ],
+  "author": "Guilherme Gules Moreira",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.0"
+  }
+}
